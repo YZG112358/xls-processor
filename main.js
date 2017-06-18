@@ -71,7 +71,7 @@ var log = function (message) {
 
 ipc.on('open-file-dialog', function (event) {
   dialog.showOpenDialog({
-    properties: ['openFile', 'openDirectory']
+    properties: ['openFile']
   }, function (files) {
     if (files) {
       try {
