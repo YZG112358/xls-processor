@@ -154,7 +154,7 @@ ipc.on('process', function (event) {
   _workbook.SheetNames[4] = 'C';
 
   var _filter = (value) => {
-    return incKeywords.every((keyword) => value['检查结论'].indexOf(keyword) > -1)
+    return incKeywords.some((keyword) => value['检查结论'].indexOf(keyword) > -1)
       && decKeywords.every((keyword) => value['检查结论'].indexOf(keyword) === -1);
   };
 
